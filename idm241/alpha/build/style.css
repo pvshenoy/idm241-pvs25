@@ -164,5 +164,6 @@ ul {
 
     .ul {
         max-width: auto;
+        padding-right: 1rem;
     }
 }
