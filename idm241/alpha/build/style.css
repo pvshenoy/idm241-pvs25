@@ -78,14 +78,78 @@ ul {
     padding-left: 2rem;
     max-width: 12rem;
 }
-
+/* 
 .card {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    background-color: transparent;
     width: 24rem;
+    height: 24rem;
+    perspective: 1000px;
 }
 
+.content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .content {
+    transform: rotateY(180deg);
+}
+
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+   */
+
+.card {
+    padding-top: 3rem;
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    margin: auto;
+}
+  
+.content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+  
+.card:hover .content {
+    transform: rotateY(180deg);
+}
+
+.card-img:hover {
+    border: 2px solid #00DD5F;
+    border-radius: 12px;
+}
+  
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+  
+.back {
+    transform: rotateY(180deg);
+}
 
 @media only screen and (max-width: 768px) {
     .descriptions {
