@@ -64,10 +64,14 @@ img {
 }
 
 .row {
-    padding: 2rem; 
+    padding: 2rem;
+    padding-top: 1rem;
     justify-content: space-evenly;
-    max-width: 12rem;
+    max-width: 24rem;
     text-align: left;
+    background-color: #2B3641;
+    border-radius: 2rem;
+    margin: 2rem;
 }
 
 ul {
@@ -75,24 +79,26 @@ ul {
     max-width: 12rem;
 }
 
-.images {
+.card {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
+    width: 24rem;
 }
 
-.image_1 {
-    padding-top: 1rem;
-}
-
-.image_2 {
-    padding-top: 1rem;
-}
 
 @media only screen and (max-width: 768px) {
     .descriptions {
         flex-direction: column; 
     }
-}
 
+    .row {
+        padding: 0rem 0rem 0rem 2rem;
+        max-width: auto;
+        background-color: none;
+    }
+
+    .ul {
+        max-width: auto;
+    }
+}
