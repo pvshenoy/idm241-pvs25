@@ -128,6 +128,17 @@ ul {
     transform: rotateY(180deg);
 }
 
+.images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.image {
+    padding-top: 1rem;
+}
+
 @media only screen and (max-width: 768px) {
     .descriptions {
         flex-direction: column; 
