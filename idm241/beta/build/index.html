@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letterboxd Microinteraction Redesign</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrapper">
+<header>
+    <h1> IDM 241 - MICRO INTERACTIONS | ALPHA </h1>
+    <div class="logo_box">
+        <h4> <a href="https://letterboxd.com/films/" target="_blank">Letterboxd</a> </h4>
+        <img class="logo" src="../images/logo.png">
+</div>
+</header>
+<div id="microinteraction">
+    <div class="card">
+        <div class="content">
+            <div class="front">
+            <img class="card-img" src="../images/spree.png">
+            </div>
+            <div class="back">
+                <div class="list">
+                    <ul class="stats_list">
+                        <li class="list-item"> <img class="list-icon" src="../images/eye-list.png" alt="">167k views</li>
+                        <li class="list-item"> <img class="list-icon" src="../images/list-list.png" alt="">201k views</li>
+                        <li class="list-item"> <img class="list-icon" src="../images/heart-list.png" alt="">448k views</li>
+                    </ul>
+                </div>
+                <div class="rating">
+                    <img src="../images/rating-system.png" alt="rating">
+                </div>
+                <div class="actions">
+                    <img class="icon" src="../images/review-icon.png" alt="write a review">
+                    <img class="icon blue" src="../images/eye-icon.svg" alt="add to lists">
+                    <img class="icon" src="../images/list-icon.png" alt="add to lists">
+                </div>
+            </div>
+        </div>
+        </div>
+</div>
+<h2>Descriptions:</h2>
+<div class="descriptions">
+    <div class="row">
+        <h3>TRIGGERS</h3>
+        <ul>
+            <li>user hovers on film card</li>
+            <li>user hovers off film card</li>
+            <li>user hovers on eye icon</li>
+            <li>user hovers off eye icon</li>
+        </ul>
+    </div>
+    <div class="row">
+        <h3>RULES</h3>
+        <ul>
+            <li>cursor changes to pointer when mouse is hovering over the card</li>
+            <li>card transforms on the Y-axis 180 degrees</li>
+            <li>list items fade in from 0% opacity to 100% opacity</li>
+            <li>list items transform in the y direction up 50px</li>
+        </ul>
+    </div>
+    <div class="row">
+        <h3>FEEDBACK</h3>
+        <ul>
+            <li>cursor changes to pointer when mouse is hovering over the card</li>
+            <li>card transforms on the Y-axis 180 degrees</li>
+            <li>list items fade in from 0% opacity to 100% opacity</li>
+            <li>list items transform in the y direction up 50px</li>
+        </ul>
+    </div>
+    <div class="row">
+        <h3>LOOPS & MODES</h3>
+        <ul>
+            <li> When the user is hovering over the card, the card flips over and 
+                reveals more menu information on how the image can be interacted with, such as 
+                writing a review, favoriting, and adding to a list. It also reveals statistics from other users from a database. When the user hovers off, the card flips back to the film poster and the user's choices are recorded in a database </li>
+        </ul>
+    </div>
+</div>
+    <p class="credits">All images and icons credited to <a href="https://letterboxd.com/films/">Letterboxd</a></p>
+</div>
+</body>
+</html>
