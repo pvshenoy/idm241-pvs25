@@ -9,12 +9,13 @@ var myImage = document.getElementById("blue");
       myImage.src = "../images/eye-icon.svg";
     }
 
+const listItem = document.querySelectorAll('.list-item')
+const cardHover = document.querySelector('#card')
+
+cardHover.addEventListener('mouseover', () => {
+  userFeedback.classList.add('list-item-hover')
+})
 
 
-// function hover(element) {
-//     element.setAttribute('src', 'http://dummyimage.com/100x100/eb00eb/fff');
-//   }
-  
-//   function unhover(element) {
-//     element.setAttribute('src', 'http://dummyimage.com/100x100/000/fff');
-//   }
+
+    
