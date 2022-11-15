@@ -26,7 +26,7 @@ h1{
 h2 {
     padding-left: 2rem;
     margin-bottom: 0rem;
-    text-align: center;
+    text-align: left;
 }
 
 h3 {
@@ -40,6 +40,11 @@ h4 {
 
 p {
     text-align: center;
+}
+
+.subheading {
+    text-align: center;
+    
 }
 
 .logo_box {
@@ -89,7 +94,6 @@ ul {
     margin: 0 auto;
 }
 .card {
-    border-radius: 12px;
     padding-top: 1.5rem;
     background-color: transparent;
     width: 200px;
@@ -112,6 +116,8 @@ ul {
 }
 
 .card-img:hover {
+    border: 2px solid #00DD5F;
+    border-radius: 12px;
     cursor:pointer;
 }
    
@@ -121,130 +127,22 @@ ul {
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border-radius: 12px;
 }
 
 .back {
     transform: rotateY(180deg);
-    background-color: #14181B
 }
 
-.stats_list {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center;
-    align-items: center; */
-    padding-left: 0rem;
-    margin: 2rem 1rem 2rem 1rem;
-    text-align: left;
-
-}
-
-.list-item {
+.images {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    margin: 0rem auto;
-    list-style-type: none;
-    align-items: center;
-    padding: .4rem 0rem;
-    
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-.list-item-hover {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    margin: 0rem auto;
-    list-style-type: none;
-    align-items: center;
-    padding: .4rem 0rem;
-    
+.image {
+    padding-top: 1rem;
 }
-
-.list-icon {
-    width: 1.5rem;
-    padding-right: .5rem;
-    align-items: center;
-    margin-left: 1.75rem;
-}
-
-
-.icon {
-    width: 2rem;
-    padding: 0rem .4rem; 
-}
-
-.rating {
-    margin: 1rem 1rem;
-}
-
-.blue:hover {
-    background-image: url('..images/eye_icon-hover.svg')
-}
-
-svg {
-    margin-top: 0rem;
-}
-
-img {
-    max-width: 100%;
-}
-
-/* animations */
-
-.card:hover li.list-item-hover {
-    opacity: 0;
-    -webkit-animation: fadeIn 0.9s 1;
-    animation: fadeIn 0.9s 1;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-}
-  
-  li:nth-child(5n+1) {
-    -webkit-animation-delay: 0.5s;
-    animation-delay: 0.5s;
-  }
-  
-  li:nth-child(5n+2) {
-    -webkit-animation-delay: .75s;
-    animation-delay: .75s;
-  }
-  
-  li:nth-child(5n+3) {
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
-  }
-  
-  /* Animation steps */
-  
-  @-webkit-keyframes fadeIn {
-    0% {
-      opacity: 0.0;
-      transform: translateY(0);
-    }
-    100% {
-      opacity: 1.0;
-      transform: translateY(1);
-    }
-  }
-  
-  @keyframes fadeIn {
-    0% {
-      opacity: 0.0;
-      transform: translateY(1rem);
-    }
-    100% {
-      opacity: 1.0;
-      transform: translateY(0);
-    }
-} 
-  
-  
-
-
-
-
 
 @media only screen and (max-width: 768px) {
     .descriptions {

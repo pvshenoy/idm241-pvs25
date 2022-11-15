@@ -9,12 +9,18 @@ var myImage = document.getElementById("blue");
       myImage.src = "../images/eye-icon.svg";
     }
 
-const listItem = document.querySelectorAll('.list-item')
-const cardHover = document.querySelector('#card')
+// const card = document.getElementById("card");
+// const listItem = document.getElementsByClassName("list-item");
 
-cardHover.addEventListener('mouseover', () => {
-  userFeedback.classList.add('list-item-hover')
-})
+// card.addEventListener('mouseover'); {
+
+// }
+
+// function onHover() {
+//   var listItem = document.getElementsByClassName("list-item");
+//   listItem.classList.add("list-item-hover");
+// }
+
 
 
 
