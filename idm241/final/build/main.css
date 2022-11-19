@@ -1,0 +1,332 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #202830;
+    color: #EAF6FF;
+}
+
+.wrapper {
+    padding: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: #39BCF2;
+}
+
+a:visited {
+    color: #39BCF2;
+}
+
+h1{
+    color: #EC7617;
+    text-align: center;
+    word-wrap: wrap;
+}
+
+h2 {
+    padding-left: 2rem;
+    margin-bottom: 0rem;
+    text-align: center;
+}
+
+h3 {
+    color: #00DD5F;
+}
+h4 {
+    color: #39BCF2;
+    text-align: left;
+    padding-top: 0rem;
+}
+
+p {
+    text-align: center;
+}
+
+.logo_box {
+    display: flex;
+    justify-content: center;
+    padding-top: 0rem;
+}
+
+.logo {
+    max-width: 6rem;
+    max-height: 3rem;  
+    padding-top: .5rem;
+}
+
+img {
+    max-width: 36rem;
+    max-height: 18rem;
+}
+
+.descriptions {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 0rem;
+    margin: 0rem;
+}
+
+.row {
+    padding: 2rem;
+    padding-top: 1rem;
+    justify-content: space-evenly;
+    max-width: 24rem;
+    text-align: left;
+    background-color: #2B3641;
+    border-radius: 2rem;
+    margin: 2rem;
+}
+
+ul {
+    padding-left: 2rem;
+    max-width: 12rem;
+}
+
+#microinteraction {
+    width: 320px;
+    margin: 0 auto;
+}
+.card {
+    border-radius: 12px;
+    padding-top: 1.5rem;
+    background-color: transparent;
+    width: 200px;
+    height: 290px;
+    perspective: 1000px;
+    margin: auto;
+}
+  
+.content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .content {
+    transform: rotateY(180deg);
+}
+
+.card-img:hover {
+    cursor:pointer;
+}
+   
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 12px;
+}
+
+.back {
+    transform: rotateY(180deg);
+    background-color: #14181B
+}
+
+.stats_list {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    padding-left: 0rem;
+    margin: 2rem 1rem 1rem 1rem;
+    text-align: left;
+
+}
+
+.list-item {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0rem auto;
+    list-style-type: none;
+    align-items: center;
+    padding: .4rem 0rem;
+    
+}
+
+.list-item-hover {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0rem auto;
+    list-style-type: none;
+    align-items: center;
+    padding: .4rem 0rem;
+    
+}
+
+.list-icon {
+    width: 1.5rem;
+    padding-right: .5rem;
+    align-items: center;
+    margin-left: 1.75rem;
+}
+
+
+.icon {
+    width: 2rem;
+    padding: 0rem .4rem; 
+}
+
+.rating {
+    margin: 1rem 1rem;
+}
+
+svg {
+    width: 1.5rem;
+    padding: 0rem .8rem; 
+}
+
+.resize {
+    margin: .3rem;
+}
+
+/* .resize-me {
+    margin-top: .2rem;
+} */
+
+svg:hover .green { 
+    stroke:#00DD5F;
+  }
+
+  svg:hover .blue { 
+    fill: #39BCF2;
+  }
+
+  svg:hover .orange { 
+    fill: #EC7617;
+  }
+
+img {
+    max-width: 100%;
+}
+
+/* star rating  */
+
+.rating-system {
+    width: 100%;
+}
+fieldset, label { margin: 0; padding: 0; }
+body{ margin: 20px; }
+h1 { font-size: 1.5em; margin: 10px; }
+
+/****** Style Star Rating Widget *****/
+
+.rating { 
+  border: none;
+  float: left;
+  margin: 0rem 0rem 1rem 1.29rem;
+}
+
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 5px;
+  font-size: 1.5em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label { 
+  color: #2B333D; 
+  float: right; 
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #39BCF2;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #39BCF2;  } 
+
+
+
+/* animations */
+
+.card:hover li.list-item-hover {
+    opacity: 0;
+    -webkit-animation: fadeIn 0.9s 1;
+    animation: fadeIn 0.9s 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+  
+  li:nth-child(5n+1) {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+  }
+  
+  li:nth-child(5n+2) {
+    -webkit-animation-delay: .75s;
+    animation-delay: .75s;
+  }
+  
+  li:nth-child(5n+3) {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+  }
+  
+  /* Animation steps */
+  
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0.0;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 1.0;
+      transform: translateY(1);
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0.0;
+      transform: translateY(1rem);
+    }
+    100% {
+      opacity: 1.0;
+      transform: translateY(0);
+    }
+} 
+  
+  
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .descriptions {
+        flex-direction: column; 
+    }
+
+    .row {
+        padding: 0rem 0rem 0rem 2rem;
+        max-width: auto;
+        background-color: none;
+    }
+
+    .ul {
+        max-width: auto;
+        padding-right: 1rem;
+    }
+}

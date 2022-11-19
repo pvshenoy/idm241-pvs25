@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letterboxd Microinteraction Redesign</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="wrapper">
+<header>
+    <h1> IDM 241 - MICRO INTERACTIONS | FINAL BUILD</h1>
+    <div class="logo_box">
+        <h4> <a href="https://letterboxd.com/films/" target="_blank">Letterboxd</a></h4>
+        <img class="logo" src="../images/logo.png">
+</div>
+</header>
+<div id="microinteraction">
+    <div class="card" id="card" onmouseover="onHover()">
+        <div class="content">
+            <div class="front">
+            <img class="card-img" src="../images/spree.png">
+            </div>
+            <div class="back">
+                <div class="list">
+                    <ul class="stats_list">
+                        <li class="list-item-hover"> <img class="list-icon" src="../images/eye-list.png" alt="">167k views</li>
+                        <li class="list-item-hover"> <img class="list-icon" src="../images/list-list.png" alt="">201k views</li>
+                        <li class="list-item-hover"> <img class="list-icon" src="../images/heart-list.png" alt="">448k views</li>
+                    </ul>
+                </div>
+                <div class="rating-system">
+                    <fieldset class="rating">
+                        <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                        <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                        <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                        <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                        <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                        <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                        <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                        <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                        <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                        <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+                    </fieldset>
+                </div>
+                <div class="actions">
+                    <svg viewbox="0 0 80.65 80.64"><style>.green{fill:none;stroke:#eaf6ff;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.33px;}</style><path class="green" d="M34.67,77.97h42.67m-10.67-58.67l5.33,5.33m2.67-18.67c1.05,1.05,1.88,2.3,2.45,3.67,.57,1.37,.86,2.84,.86,4.33s-.29,2.96-.86,4.33c-.57,1.37-1.4,2.62-2.45,3.67L24,72.64l-21.33,5.33,5.33-21.03L58.69,5.99c2-2.01,4.68-3.19,7.51-3.31,2.83-.12,5.6,.82,7.77,2.65l.7,.65Z"/></svg>
+                    <svg class="resize" viewbox="0 0 100.05 65.18"><path fill="#eaf6ff" class="blue" d="M99.24,31.11C88.76,11.73,70.37,0,50.03,0S11.26,11.73,.87,31.11l-.87,1.46,.81,1.49c10.48,19.38,28.87,31.11,49.22,31.11s38.76-11.57,49.22-31.11l.81-1.49-.81-1.46Zm-49.22,27.69c-17.52,0-33.6-9.77-42.93-26.23C16.43,16.12,32.51,6.35,50.03,6.35s33.41,9.8,42.9,26.23c-9.49,16.46-25.42,26.23-42.9,26.23Z"/><path fill="#eaf6ff" class="blue" d="M50.93,11.32c-4.22,.03-8.33,1.31-11.82,3.68-3.49,2.37-6.2,5.72-7.79,9.62-1.59,3.91-1.98,8.2-1.14,12.33,.85,4.13,2.9,7.92,5.9,10.89,3,2.97,6.81,4.98,10.95,5.78,4.14,.8,8.43,.36,12.32-1.28,3.89-1.63,7.21-4.38,9.53-7.9,2.33-3.52,3.56-7.65,3.54-11.87-.01-2.81-.58-5.59-1.67-8.17-1.09-2.59-2.68-4.94-4.67-6.91-2-1.97-4.36-3.53-6.97-4.59-2.6-1.06-5.39-1.59-8.19-1.57Zm0,36.46c-2.98-.03-5.88-.94-8.35-2.62-2.46-1.68-4.38-4.04-5.5-6.8-1.12-2.76-1.41-5.79-.81-8.71,.59-2.92,2.04-5.6,4.15-7.7,2.11-2.1,4.8-3.53,7.72-4.12,2.92-.58,5.95-.29,8.71,.85,2.76,1.13,5.11,3.06,6.78,5.53,1.67,2.47,2.56,5.38,2.58,8.36,0,2.01-.38,3.99-1.15,5.85-.77,1.85-1.89,3.54-3.31,4.95-1.42,1.42-3.11,2.53-4.97,3.29-1.86,.76-3.85,1.14-5.85,1.12Z"/></svg>
+                    <svg viewbox="0 0 87.11 99.56"><path class="orange" fill="#eaf6ff" d="M84,99.56H28c-.83,0-1.62-.33-2.2-.91-.58-.58-.91-1.38-.91-2.2V28c0-.83,.33-1.62,.91-2.2,.58-.58,1.37-.91,2.2-.91h56c.83,0,1.62,.33,2.2,.91,.58,.58,.91,1.37,.91,2.2V96.44c0,.82-.33,1.62-.91,2.2-.58,.58-1.37,.91-2.2,.91Zm-52.89-6.22h49.78V31.11H31.11v62.22Z"/><path class="orange" fill="#eaf6ff" d="M37.33,43.56h37.33v6.22H37.33v-6.22Z"/><path class="orange" fill="#eaf6ff" d="M37.33,56h37.33v6.22H37.33v-6.22Z"/><path class="orange" fill="#eaf6ff" d="M37.33,68.44h37.33v6.22H37.33v-6.22Z"/><path class="orange" fill="#eaf6ff" d="M6.22,68.44V6.22H62.22V3.11c0-.83-.33-1.62-.91-2.2-.58-.58-1.37-.91-2.2-.91H3.11C2.29,0,1.49,.33,.91,.91c-.58,.58-.91,1.37-.91,2.2V71.56c0,.83,.33,1.62,.91,2.2,.58,.58,1.37,.91,2.2,.91h3.11v-6.22Z"/><path class="orange" fill="#eaf6ff" d="M18.67,80.89V18.67h56v-3.11c0-.83-.33-1.62-.91-2.2-.58-.58-1.37-.91-2.2-.91H15.56c-.83,0-1.62,.33-2.2,.91-.58,.58-.91,1.37-.91,2.2V84c0,.83,.33,1.62,.91,2.2,.58,.58,1.37,.91,2.2,.91h3.11v-6.22Z"/></svg>
+                </div>
+            </div>
+        </div>
+        </div>
+</div>
+
+<h2>Descriptions:</h2>
+<div class="descriptions">
+    <div class="row">
+        <h3>TRIGGERS</h3>
+        <ul>
+            <li>user hovers on film card</li>
+            <li>user hovers off film card</li>
+            <hr>
+            <li>user hovers on eye icon</li>
+            <li>user hovers off eye icon</li>
+            <hr>
+            <li>user hovers on review icon</li>
+            <li>user hovers off review icon</li>
+            <hr>
+            <li>user hovers on list icon</li>
+            <li>user hovers off list icon</li>
+            <hr>
+            <li>user clicks review icon</li>
+            <hr>
+            <li>user hovers on rating star</li>
+            <li>user hovers off rating star</li>
+            <li>user clicks rating star</li>
+        </ul>
+    </div>
+    <div class="row">
+        <h3>RULES</h3>
+        <ul>
+            <li>cursor changes to pointer when mouse is hovering over the card, icons, and star rating</li>
+            <hr>
+            <li>card transforms on the Y-axis 180 degrees</li>
+            <hr>
+            <li>list items fade in from 0% opacity to 100% opacity and transform in the y direction up 50px</li>
+            <hr>
+            <li>star icons fill with #FFFFFF when mouse is hovering on/clicking the icon</li>
+            <hr>
+            <li>review icon stroke color changes from #FFFFFF to <span style="color:#00dd5f">#00DD5F</span>on hover</li>
+            <li>eye icon stroke color changes from #FFFFFF to <span style="color:#39BCF2">#39BCF2</span> on hover</li>
+            <li>list icon stroke color changes from #FFFFFF to <span style="color:#EC7617">#EC7617</span> on hover</li>
+            <hr>
+            <li>fixed overlay appears when review icon is clicked</li>
+        </ul>
+    </div>
+    <div class="row">
+        <h3>FEEDBACK</h3>
+        <ul>
+            <li>cursor changes to pointer when mouse is hovering over the card, icons, and star rating</li>
+            <hr>
+            <li>card transforms on the Y-axis 180 degrees</li>
+            <hr>
+            <li>list items fade in from 0% opacity to 100% opacity and transform in the y direction up 50px</li>
+            <hr>
+            <li>star icons fill with #FFFFFF when mouse is hovering on/clicking the icon</li>
+            <hr>
+            <li>review icon stroke color changes from #FFFFFF to <span style="color:#00dd5f">#00DD5F</span> on hover</li>
+            <li>eye icon stroke color changes from #FFFFFF to <span style="color:#39BCF2">#39BCF2</span> on hover</li>
+            <li>list icon stroke color changes from #FFFFFF to <span style="color:#EC7617">#EC7617</span> on hover</li>
+            <hr>
+            <li>fixed overlay appears when review icon is clicked</li>
+        </ul>
+    </div>
+    <div class="row">
+        <h3>LOOPS & MODES</h3>
+        <ul>
+            <li> When the user is hovering over the card, the card flips over and 
+                reveals more menu information on how the image can be interacted with, such as 
+                writing a review, favoriting, and adding to a list. It also reveals statistics from other users from a database. When the user hovers off, the card flips back to the film poster and the user's choices are recorded in a database 
+            </li>
+            <li>When the user clicks the review icon, a mode appears where the user can log their personal review of a film</li>
+        </ul>
+    </div>
+</div>
+    <p class="credits">All images and icons credited to <a href="https://letterboxd.com/films/">Letterboxd</a></p>
+</div>
+
+</body>
+<script src="script.js"></script>
+</html>
