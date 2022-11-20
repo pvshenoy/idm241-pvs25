@@ -5,19 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Letterboxd Microinteraction Redesign</title>
+    <link rel="stylesheet" href="https://use.typekit.net/nry3jcp.css">
+    <script src="https://kit.fontawesome.com/e00a80c32c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-<div class="wrapper">
 <header>
-    <h1> IDM 241 - MICRO INTERACTIONS | FINAL BUILD</h1>
-    <div class="logo_box">
-        <h4> <a href="https://letterboxd.com/films/" target="_blank">Letterboxd</a></h4>
+    <a class="letterboxd" href="https://letterboxd.com/films/" target="_blank">
         <img class="logo" src="../images/logo.png">
-</div>
+    </a>
+    <div class="builds">
+        <a href="http://preetivshenoy.com/idm241/alpha/build" class="build-link alpha">ALPHA BUILD</a>
+        <a href="http://preetivshenoy.com/idm241/beta/build" class="build-link beta">BETA BUILD</a>
+        <a href="http://preetivshenoy.com/idm241/final/build" class="build-link final">FINAL BUILD</a>
+    </div>
+    <div class="mobile-builds">
+        <a href="http://preetivshenoy.com/idm241/alpha/build"><img class="build-link-mobile" src="../images/alpha_build.png"></a>
+        <a href="http://preetivshenoy.com/idm241/beta/build"><img class="build-link-mobile" src="../images/beta_build.png"></a>
+        <a href="http://preetivshenoy.com/idm241/final/build"><img class="build-link-mobile" src="../images/final_build.png"></a>
+    </div>
 </header>
 <div id="microinteraction">
-    <div class="card" id="card" onmouseover="onHover()">
+    <div class="card" id="card">
         <div class="content">
             <div class="front">
             <img class="card-img" src="../images/spree.png">
@@ -32,16 +41,16 @@
                 </div>
                 <div class="rating-system">
                     <fieldset class="rating">
-                        <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                        <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Great Movie!"></label>
                         <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
                         <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
-                        <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
-                        <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                        <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Not bad - 3.5 stars"></label>
+                        <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Ok - 3 stars"></label>
                         <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
                         <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
-                        <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
-                        <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
-                        <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+                        <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Bad - 1.5 stars"></label>
+                        <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Horrible - 1 star"></label>
+                        <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Horrible - 0.5 stars"></label>
                     </fieldset>
                 </div>
                 <div class="actions">
@@ -53,81 +62,58 @@
         </div>
         </div>
 </div>
-
-<h2>Descriptions:</h2>
-<div class="descriptions">
-    <div class="row">
+<section class="triggers-rules-feedback-loops">
+    <div class="description-type triggers">
         <h3>TRIGGERS</h3>
-        <ul>
-            <li>user hovers on film card</li>
-            <li>user hovers off film card</li>
-            <hr>
-            <li>user hovers on eye icon</li>
-            <li>user hovers off eye icon</li>
-            <hr>
-            <li>user hovers on review icon</li>
-            <li>user hovers off review icon</li>
-            <hr>
-            <li>user hovers on list icon</li>
-            <li>user hovers off list icon</li>
-            <hr>
-            <li>user clicks review icon</li>
-            <hr>
-            <li>user hovers on rating star</li>
-            <li>user hovers off rating star</li>
-            <li>user clicks rating star</li>
+        <hr>
+        <ul class="descriptions-list">
+            <li class="description">user <span style="color:#39BCF2">hovers</span> on film card<br>user <span style="color:#39BCF2">hovers</span> off film card</li>
+            <li class="description">user <span style="color:#39BCF2">hovers</span> on eye icon<br>user <span style="color:#39BCF2">hovers</span> off eye icon</li>
+            <li class="description">user <span style="color:#39BCF2">hovers</span> on review icon<br>user <span style="color:#39BCF2">hovers</span> off review icon</li>
+            <li class="description">user <span style="color:#39BCF2">hovers</span> on list<br>user <span style="color:#39BCF2">hovers</span> off list</li>
+            <li class="description">user <span style="color:#39BCF2">hovers</span> on rating star<br>user <span style="color:#39BCF2">hovers</span> off rating star<br>user <span style="color:#00dd5f">clicks</span> rating star</li>
         </ul>
     </div>
-    <div class="row">
+    <div class="description-type rules">
         <h3>RULES</h3>
-        <ul>
-            <li>cursor changes to pointer when mouse is hovering over the card, icons, and star rating</li>
-            <hr>
-            <li>card transforms on the Y-axis 180 degrees</li>
-            <hr>
-            <li>list items fade in from 0% opacity to 100% opacity and transform in the y direction up 50px</li>
-            <hr>
-            <li>star icons fill with #FFFFFF when mouse is hovering on/clicking the icon</li>
-            <hr>
-            <li>review icon stroke color changes from #FFFFFF to <span style="color:#00dd5f">#00DD5F</span>on hover</li>
-            <li>eye icon stroke color changes from #FFFFFF to <span style="color:#39BCF2">#39BCF2</span> on hover</li>
-            <li>list icon stroke color changes from #FFFFFF to <span style="color:#EC7617">#EC7617</span> on hover</li>
-            <hr>
-            <li>fixed overlay appears when review icon is clicked</li>
+        <hr>
+        <ul class="descriptions-list">
+            <li class="description"><span style="color: #EAF6FF">cursor changes to pointer</span> when mouse is <span style="color:#39BCF2">hovering</span> over the card, icons, and star rating</li>
+            <li class="description"><span style="color: #EAF6FF">card transforms</span> on the Y-axis 180 degrees</li>
+            <li class="description"><span style="color: #EAF6FF">list items fade in</span> from 0% opacity to 100% opacity and transform in the y direction up 50px</li>
+            <li class="description"><span style="color: #EAF6FF">star icons fill</span> with <span style="color:#39BCF2">#39BCF2</span> when mouse is <span style="color:#39BCF2">hovering</span> on/<span style="color:#00dd5f">clicking</span> the icon</li>
+            <li class="description"><span style="color: #EAF6FF">review icon stroke color changes</span> from <span style="color: #EAF6FF">#EAF6FF</span> to <span style="color:#00dd5f">#00DD5F</span> on hover</li>
+            <li class="description"><span style="color: #EAF6FF">eye icon stroke color changes</span> from <span style="color: #EAF6FF">#EAF6FF</span> to <span style="color:#39BCF2">#39BCF2</span> on hover</li>
+            <li class="description"><span style="color: #EAF6FF">list icon stroke color changes</span> from <span style="color: #EAF6FF">#EAF6FF</span> to <span style="color:#EC7617">#EC7617</span> on hover</li>
         </ul>
     </div>
-    <div class="row">
+    <div class="description-type feedback">
         <h3>FEEDBACK</h3>
-        <ul>
-            <li>cursor changes to pointer when mouse is hovering over the card, icons, and star rating</li>
-            <hr>
-            <li>card transforms on the Y-axis 180 degrees</li>
-            <hr>
-            <li>list items fade in from 0% opacity to 100% opacity and transform in the y direction up 50px</li>
-            <hr>
-            <li>star icons fill with #FFFFFF when mouse is hovering on/clicking the icon</li>
-            <hr>
-            <li>review icon stroke color changes from #FFFFFF to <span style="color:#00dd5f">#00DD5F</span> on hover</li>
-            <li>eye icon stroke color changes from #FFFFFF to <span style="color:#39BCF2">#39BCF2</span> on hover</li>
-            <li>list icon stroke color changes from #FFFFFF to <span style="color:#EC7617">#EC7617</span> on hover</li>
-            <hr>
-            <li>fixed overlay appears when review icon is clicked</li>
+        <hr>
+        <ul class="descriptions-list">
+            <li class="description"><span style="color: #EAF6FF">cursor changes to pointer</span> when mouse is <span style="color:#39BCF2">hovering</span> over the card, icons, and star rating</li>
+            <li class="description"><span style="color: #EAF6FF">card transforms</span> on the Y-axis 180 degrees</li>
+            <li class="description"><span style="color: #EAF6FF">list items fade in</span> from 0% opacity to 100% opacity and transform in the y direction up 50px</li>
+            <li class="description"><span style="color: #EAF6FF">star icons fill</span> with <span style="color:#39BCF2">#39BCF2</span> when mouse is <span style="color:#39BCF2">hovering</span> on/<span style="color:#00dd5f">clicking</span> the icon</li>
+            <li class="description"><span style="color: #EAF6FF">review icon stroke color changes</span> from <span style="color: #EAF6FF">#EAF6FF</span> to <span style="color:#00dd5f">#00DD5F</span> on hover</li>
+            <li class="description"><span style="color: #EAF6FF">eye icon stroke color changes</span> from <span style="color: #EAF6FF">#EAF6FF</span> to <span style="color:#39BCF2">#39BCF2</span> on hover</li>
+            <li class="description"><span style="color: #EAF6FF">list icon stroke color changes</span> from <span style="color: #EAF6FF">#EAF6FF</span> to <span style="color:#EC7617">#EC7617</span> on hover</li>
         </ul>
     </div>
-    <div class="row">
+    <div class="description-type loops-modes">
         <h3>LOOPS & MODES</h3>
-        <ul>
-            <li> When the user is hovering over the card, the card flips over and 
-                reveals more menu information on how the image can be interacted with, such as 
-                writing a review, favoriting, and adding to a list. It also reveals statistics from other users from a database. When the user hovers off, the card flips back to the film poster and the user's choices are recorded in a database 
+        <hr>
+        <ul class="descriptions-list">
+            <li class="description"> 
+                When the user is <span style="color:#39BCF2">hovering</span> over the card, <span style="color: #EAF6FF">the card flips over and reveals more menu information on how the image 
+                    can be interacted with.</span> This includes writing a review, adding to watched movies, and adding to a list. It also 
+                reveals statistics from other users from a database. When the user hovers off, the card flips back to the film 
+                poster and the user’s choices are <span style="color: #EC7617">recorded in a database</span>
             </li>
-            <li>When the user clicks the review icon, a mode appears where the user can log their personal review of a film</li>
         </ul>
     </div>
-</div>
-    <p class="credits">All images and icons credited to <a href="https://letterboxd.com/films/">Letterboxd</a></p>
-</div>
-
+</section>
+<p class="credits">All images and icons credited to <a style="color:#39BCF2" href="https://letterboxd.com/films/">Letterboxd</a></p>
 </body>
 <script src="script.js"></script>
 </html>

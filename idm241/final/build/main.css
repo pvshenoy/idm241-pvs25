@@ -1,59 +1,69 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+@import 'normalize.css';
 
 body {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #202830;
+    background: rgb(32,40,48);
+    background: linear-gradient(180deg, rgba(32,40,48,1) 0%, rgba(20,24,27,1) 73%, rgba(20,24,27,1) 100%);
     color: #EAF6FF;
+    padding: 0rem 0rem .5rem 0rem;
+    font-family: elza,sans-serif;
+    font-style: normal;
+    line-height: 1.5rem;
+    margin: none;
 }
 
-.wrapper {
-    padding: 2rem;
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #14181B;
+    padding: 1.25rem 2rem;
 }
 
 a {
     text-decoration: none;
-    color: #39BCF2;
 }
 
-a:visited {
-    color: #39BCF2;
+.builds {
+    margin: .3rem 0rem 0rem 0rem;
+    color: #8291A1;
 }
 
-h1{
+.build-link {
+    font-size: 1rem;
+    padding: 1rem;
+    color: #8291A1;
+}
+
+.mobile-builds {
+    display: none;
+}
+
+.alpha:hover {
     color: #EC7617;
-    text-align: center;
-    word-wrap: wrap;
 }
 
-h2 {
-    padding-left: 2rem;
-    margin-bottom: 0rem;
-    text-align: center;
-}
-
-h3 {
+.beta:hover {
     color: #00DD5F;
 }
-h4 {
+
+.final:hover {
     color: #39BCF2;
-    text-align: left;
-    padding-top: 0rem;
 }
 
-p {
+
+
+.credits {
     text-align: center;
 }
 
-.logo_box {
+.letterboxd {
     display: flex;
-    justify-content: center;
-    padding-top: 0rem;
+    align-items: center;
 }
 
 .logo {
-    max-width: 6rem;
-    max-height: 3rem;  
-    padding-top: .5rem;
+    width: 10rem
 }
 
 img {
@@ -61,30 +71,59 @@ img {
     max-height: 18rem;
 }
 
-.descriptions {
-    display: flex; 
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 0rem;
-    margin: 0rem;
-}
-
-.row {
-    padding: 2rem;
-    padding-top: 1rem;
-    justify-content: space-evenly;
-    max-width: 24rem;
+h3 {
+    color: #8E9498;
     text-align: left;
-    background-color: #2B3641;
-    border-radius: 2rem;
-    margin: 2rem;
+    padding-top: 0rem;
+    margin: 2rem 0rem .2rem 2rem;
+    font-size: 1rem;
+    font-family: elza,sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
-ul {
-    padding-left: 2rem;
-    max-width: 12rem;
+h4 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #EAF6FF;
+    margin: 1rem;
 }
+
+hr {
+    border: .5px solid #8E9498;
+    margin: 0rem 0rem 0rem 2rem;
+    padding: 0rem;
+}
+
+.triggers-rules-feedback-loops {
+    display: flex;
+    flex-direction: row;
+    padding-right: 2rem;
+}
+
+.description-type {
+    width: 40%;
+}
+
+.descriptions-list {
+    list-style-type: none;
+    padding-inline-start: 0rem;
+    margin-left: 2rem;
+}
+
+.description {
+    border-radius: 7px;
+    background-color: #232B34;
+    padding: 1rem 1rem 1rem 1.5rem;
+    color: #9CA7AF;
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
 
 #microinteraction {
     width: 320px;
@@ -111,9 +150,6 @@ ul {
 
 .card:hover .content {
     transform: rotateY(180deg);
-}
-
-.card-img:hover {
     cursor:pointer;
 }
    
@@ -139,7 +175,6 @@ ul {
     padding-left: 0rem;
     margin: 2rem 1rem 1rem 1rem;
     text-align: left;
-
 }
 
 .list-item {
@@ -150,7 +185,6 @@ ul {
     list-style-type: none;
     align-items: center;
     padding: .4rem 0rem;
-    
 }
 
 .list-item-hover {
@@ -168,9 +202,8 @@ ul {
     width: 1.5rem;
     padding-right: .5rem;
     align-items: center;
-    margin-left: 1.75rem;
+    margin: 0rem .2rem .2rem 1.75rem; 
 }
-
 
 .icon {
     width: 2rem;
@@ -190,20 +223,19 @@ svg {
     margin: .3rem;
 }
 
-/* .resize-me {
-    margin-top: .2rem;
-} */
-
 svg:hover .green { 
     stroke:#00DD5F;
+    cursor:pointer;
   }
 
-  svg:hover .blue { 
+svg:hover .blue { 
     fill: #39BCF2;
+    cursor:pointer;
   }
 
-  svg:hover .orange { 
+svg:hover .orange { 
     fill: #EC7617;
+    cursor:pointer;
   }
 
 img {
@@ -212,11 +244,7 @@ img {
 
 /* star rating  */
 
-.rating-system {
-    width: 100%;
-}
 fieldset, label { margin: 0; padding: 0; }
-body{ margin: 20px; }
 h1 { font-size: 1.5em; margin: 10px; }
 
 /****** Style Star Rating Widget *****/
@@ -224,13 +252,14 @@ h1 { font-size: 1.5em; margin: 10px; }
 .rating { 
   border: none;
   float: left;
-  margin: 0rem 0rem 1rem 1.29rem;
+  margin-left: 1.25rem;
+  margin-top: 0rem;
 }
 
 .rating > input { display: none; } 
 .rating > label:before { 
   margin: 5px;
-  font-size: 1.5em;
+  font-size: 1.25rem;
   font-family: FontAwesome;
   display: inline-block;
   content: "\f005";
@@ -242,10 +271,20 @@ h1 { font-size: 1.5em; margin: 10px; }
 }
 
 .rating > label { 
-  color: #2B333D; 
-  float: right; 
+  color: #232B34; 
+ float: right; 
 }
 
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
 /***** CSS Magic to Highlight Stars on Hover *****/
 
 .rating > input:checked ~ label, /* show gold star when clicked */
@@ -315,18 +354,24 @@ h1 { font-size: 1.5em; margin: 10px; }
 
 
 @media only screen and (max-width: 768px) {
-    .descriptions {
+    .triggers-rules-feedback-loops {
         flex-direction: column; 
     }
 
-    .row {
-        padding: 0rem 0rem 0rem 2rem;
-        max-width: auto;
-        background-color: none;
+    .description-type {
+        width: 100%;
     }
 
-    .ul {
-        max-width: auto;
-        padding-right: 1rem;
+    .builds {
+        display: none;
+    }
+
+    .mobile-builds {
+        display: block;
+    }
+    
+    .build-link-mobile {
+        width: 1rem;
+        padding: .5rem .5rem;
     }
 }
