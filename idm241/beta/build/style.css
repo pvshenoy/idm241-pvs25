@@ -1,3 +1,5 @@
+@import 'normalize.css';
+
 body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #202830;
@@ -5,16 +7,46 @@ body {
 }
 
 .wrapper {
-    padding: 2rem;
+    padding: 0rem 2rem 2rem 2rem;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #14181B;
+    padding: 1.25rem 2rem;
+}
+
+.builds {
+    margin: 1.5rem 0rem 0rem 0rem;
+    color: #8291A1;
+}
+
+.build-link {
+    font-size: 1rem;
+    padding: 1rem;
+    color: #8291A1;
+}
+
+.mobile-builds {
+    display: none;
+}
+
+.alpha:hover {
+    color: #EC7617;
+}
+
+.beta:hover {
+    color: #00DD5F;
+}
+
+.final:hover {
+    color: #39BCF2;
 }
 
 a {
     text-decoration: none;
-    color: #39BCF2;
-}
-
-a:visited {
-    color: #39BCF2;
 }
 
 h1{
@@ -260,5 +292,23 @@ img {
     .ul {
         max-width: auto;
         padding-right: 1rem;
+    }
+
+    .description-type {
+        width: 100%;
+    }
+
+    .builds {
+        display: none;
+    }
+
+    .mobile-builds {
+        display: block;
+        margin-top: 1rem;
+    }
+    
+    .build-link-mobile {
+        width: 1rem;
+        padding: .5rem .5rem;
     }
 }

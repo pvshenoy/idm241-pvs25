@@ -1,20 +1,52 @@
+@import 'normalize.css';
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #14181B;
+    padding: 1.25rem 2rem;
+}
+
+.builds {
+    margin: 1.5rem 0rem 0rem 0rem;
+    color: #8291A1;
+}
+
+.build-link {
+    font-size: 1rem;
+    padding: 1rem;
+    color: #8291A1;
+}
+
+.mobile-builds {
+    display: none;
+}
+
+.alpha:hover {
+    color: #EC7617;
+}
+
+.beta:hover {
+    color: #00DD5F;
+}
+
+.final:hover {
+    color: #39BCF2;
+}
+
+
 body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #202830;
     color: #EAF6FF;
 }
 
-.wrapper {
-    padding: 2rem;
-}
-
 a {
     text-decoration: none;
-    color: #39BCF2;
 }
-
-a:visited {
-    color: #39BCF2;
+.wrapper {
+    padding: 2rem;
 }
 
 h1{

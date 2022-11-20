@@ -12,16 +12,16 @@ body {
     margin: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     background-color: #14181B;
     padding: 1.25rem 2rem;
-}
-
-a {
-    text-decoration: none;
 }
 
 .builds {
@@ -51,7 +51,13 @@ a {
     color: #39BCF2;
 }
 
-
+h2 {
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 100;
+    text-align: center;
+    color: #8291A1; 
+}
 
 .credits {
     text-align: center;
@@ -72,7 +78,7 @@ img {
 }
 
 h3 {
-    color: #8E9498;
+    color: #8291A1;
     text-align: left;
     padding-top: 0rem;
     margin: 2rem 0rem .2rem 2rem;
@@ -90,7 +96,7 @@ h4 {
 }
 
 hr {
-    border: .5px solid #8E9498;
+    border: .5px solid #8291A1;
     margin: 0rem 0rem 0rem 2rem;
     padding: 0rem;
 }
@@ -117,6 +123,7 @@ hr {
     padding: 1rem 1rem 1rem 1.5rem;
     color: #9CA7AF;
     margin-bottom: 1rem;
+    font-weight: 300;
 }
 
 
@@ -129,6 +136,7 @@ hr {
     width: 320px;
     margin: 0 auto;
 }
+
 .card {
     border-radius: 12px;
     padding-top: 1.5rem;
@@ -170,8 +178,6 @@ hr {
 .stats_list {
     display: flex;
     flex-direction: column;
-    /* justify-content: center;
-    align-items: center; */
     padding-left: 0rem;
     margin: 2rem 1rem 1rem 1rem;
     text-align: left;
@@ -185,17 +191,7 @@ hr {
     list-style-type: none;
     align-items: center;
     padding: .4rem 0rem;
-}
-
-.list-item-hover {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    margin: 0rem auto;
-    list-style-type: none;
-    align-items: center;
-    padding: .4rem 0rem;
-    
+    color: #C8D8E2;
 }
 
 .list-icon {
@@ -249,11 +245,17 @@ h1 { font-size: 1.5em; margin: 10px; }
 
 /****** Style Star Rating Widget *****/
 
+
 .rating { 
   border: none;
   float: left;
-  margin-left: 1.25rem;
   margin-top: 0rem;
+  margin-left: 1.8rem;
+  /* if this still doesnt look right tomorrow, change it to 1.8rem */
+}
+
+.rating-system:hover {
+    cursor: pointer;
 }
 
 .rating > input { display: none; } 
@@ -300,27 +302,30 @@ h1 { font-size: 1.5em; margin: 10px; }
 
 /* animations */
 
-.card:hover li.list-item-hover {
+.list-item-hover {    
     opacity: 0;
-    -webkit-animation: fadeIn 0.9s 1;
-    animation: fadeIn 0.9s 1;
+    -webkit-animation: fadeIn .8s 1;
+    animation: fadeIn .8s 1;
+    animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
   
-  li:nth-child(5n+1) {
-    -webkit-animation-delay: 0.5s;
-    animation-delay: 0.5s;
+ .list-item-hover:nth-child(5n+1) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
   }
   
-  li:nth-child(5n+2) {
-    -webkit-animation-delay: .75s;
-    animation-delay: .75s;
+
+  .list-item-hover:nth-child(5n+2) {
+    -webkit-animation-delay: .25s;
+    animation-delay: .25s;
   }
   
-  li:nth-child(5n+3) {
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
+
+  .list-item-hover:nth-child(5n+3) {
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
   }
   
   /* Animation steps */
@@ -346,12 +351,6 @@ h1 { font-size: 1.5em; margin: 10px; }
       transform: translateY(0);
     }
 } 
-  
-  
-
-
-
-
 
 @media only screen and (max-width: 768px) {
     .triggers-rules-feedback-loops {

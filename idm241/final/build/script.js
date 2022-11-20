@@ -1,21 +1,18 @@
-// var eyeIcon = document.getElementById("blue");
-//     eyeIcon.onmouseover = mouseOver;
-//     eyeIcon.onmouseout = mouseOut;
-    
-//     function mouseOver() { 
-//       eyeIcon.src = "../images/eye_icon-hover.svg";
-//     }
-//     function mouseOut() { 
-//       eyeIcon.src = "../images/eye-icon.svg";
-//     }
 
-// var reviewIcon = document.getElementById("green");
-//     reviewIcon.onmouseover = mouseOver;
-//     reviewIcon.onmouseout = mouseOut;
+var card = document.getElementById("card");
+    card.onmouseover = mouseOver;
+    card.onmouseout = mouseOut;
     
-//     function mouseOver() { 
-//       reviewIcon.src = "../images/review_icon-hover.png";
-//     }
-//     function mouseOut() { 
-//       reviewIcon.src = "../images/review-icon.svg";
-//     }
+    function mouseOver() { 
+        document.getElementById("item-1").classList.add("list-item-hover");
+        document.getElementById("item-2").classList.add("list-item-hover");
+        document.getElementById("item-3").classList.add("list-item-hover");
+    }
+    function mouseOut() { 
+        document.getElementById("item-1").classList.remove("list-item-hover");
+        document.getElementById("item-2").classList.remove("list-item-hover");
+        document.getElementById("item-3").classList.remove("list-item-hover");
+    }
+
+
+
