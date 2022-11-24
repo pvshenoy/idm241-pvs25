@@ -57,6 +57,7 @@ h2 {
     font-weight: 100;
     text-align: center;
     color: #8291A1; 
+    line-height: 2.5rem;
 }
 
 .credits {
@@ -99,6 +100,10 @@ hr {
     border: .5px solid #8291A1;
     margin: 0rem 0rem 0rem 2rem;
     padding: 0rem;
+}
+
+.divide {
+    margin: .5rem 0rem;
 }
 
 .triggers-rules-feedback-loops {
@@ -254,7 +259,7 @@ h1 { font-size: 1.5em; margin: 10px; }
   /* if this still doesnt look right tomorrow, change it to 1.8rem */
 }
 
-.rating-system:hover {
+label:hover {
     cursor: pointer;
 }
 
